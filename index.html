@@ -1,0 +1,2950 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+      content="#005baa">
+
+<title>ملف الأداء الوظيفي 2026 | مدارس دلتا</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="delta-logo.png"  >
+<link rel="apple-touch-icon" href="delta-logo.png">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Particles -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    font-family:'Cairo',sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #002f5f 0%,
+            #005baa 48%,
+            #168dcc 100%
+        );
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+    transition:
+        background .5s ease,
+        color .5s ease;
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+:root{
+
+    --delta-dark:#003b73;
+
+    --delta-blue:#005baa;
+
+    --delta-sky:#168dcc;
+
+    --delta-light:#eaf5ff;
+
+    --delta-gold:#f5c542;
+
+    --white:#ffffff;
+
+    --text-blue:#003b73;
+}
+
+
+/* =========================
+   PARTICLES
+========================= */
+
+#particles-js{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:-3;
+
+    pointer-events:none;
+}
+
+
+/* =========================
+   BACKGROUND LETTERS
+========================= */
+
+.language-background{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-2;
+}
+
+.language-background span{
+
+    position:absolute;
+
+    font-size:clamp(35px,5vw,85px);
+
+    font-weight:800;
+
+    color:rgba(255,255,255,.10);
+
+    user-select:none;
+
+    animation:
+        floatingLetters
+        12s
+        ease-in-out
+        infinite;
+
+    transition:
+        color .6s ease,
+        opacity .6s ease;
+}
+
+@keyframes floatingLetters{
+
+    0%,100%{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity:.10;
+    }
+
+    50%{
+
+        transform:
+            translateY(-25px)
+            rotate(5deg);
+
+        opacity:.23;
+    }
+}
+
+
+/* =========================
+   INTRO SCREEN
+========================= */
+
+#intro{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #0876c7 0%,
+            #003b73 48%,
+            #001d3b 100%
+        );
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    z-index:99999;
+
+    overflow:hidden;
+
+    animation:
+        introFade
+        1.2s
+        ease
+        forwards;
+
+    animation-delay:2.8s;
+}
+
+
+.intro-content{
+
+    width:100%;
+
+    min-height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    animation:
+        introZoom
+        1.5s
+        ease;
+}
+
+
+/* Logo inside intro */
+
+.intro-logo{
+
+    width:clamp(
+        120px,
+        18vw,
+        190px
+    );
+
+    max-width:55vw;
+
+    height:auto;
+
+    object-fit:contain;
+
+    margin-bottom:18px;
+
+    filter:
+
+        drop-shadow(
+            0 8px 15px
+            rgba(0,0,0,.30)
+        )
+
+        drop-shadow(
+            0 0 20px
+            rgba(255,255,255,.15)
+        );
+
+    animation:
+        introLogo
+        1.4s
+        ease;
+}
+
+
+/* DELTA */
+
+.intro-delta{
+
+    font-family:Arial,sans-serif;
+
+    font-size:
+        clamp(
+            60px,
+            13vw,
+            145px
+        );
+
+    line-height:1;
+
+    font-weight:900;
+
+    letter-spacing:
+        clamp(
+            5px,
+            1.5vw,
+            18px
+        );
+
+    color:#ffffff;
+
+    text-shadow:
+
+        0 0 15px
+        rgba(255,255,255,.35),
+
+        0 0 45px
+        rgba(245,197,66,.35);
+
+    animation:
+        deltaGlow
+        2s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+.intro-line{
+
+    width:
+        clamp(
+            100px,
+            30vw,
+            300px
+        );
+
+    height:4px;
+
+    margin:
+        22px
+        0
+        16px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #f5c542,
+            transparent
+        );
+
+    border-radius:10px;
+}
+
+
+.intro-title{
+
+    color:#ffffff;
+
+    font-size:
+        clamp(
+            16px,
+            3vw,
+            28px
+        );
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+
+@keyframes introLogo{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(-40px)
+            scale(.75);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes introZoom{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scale(.75);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+@keyframes deltaGlow{
+
+    from{
+
+        transform:scale(1);
+
+        text-shadow:
+            0 0 15px
+            rgba(255,255,255,.3);
+    }
+
+    to{
+
+        transform:scale(1.04);
+
+        text-shadow:
+
+            0 0 35px
+            rgba(245,197,66,.65);
+    }
+}
+
+
+@keyframes introFade{
+
+    to{
+
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+    }
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.controls{
+
+    position:fixed;
+
+    top:18px;
+    left:18px;
+
+    z-index:5000;
+
+    display:flex;
+
+    gap:10px;
+}
+
+
+.control-btn{
+
+    min-width:48px;
+
+    min-height:44px;
+
+    padding:
+        8px
+        14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    color:#003b73;
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 7px 25px
+        rgba(0,0,0,.18);
+
+    transition:
+        transform .3s,
+        background .3s,
+        color .3s;
+}
+
+
+.control-btn:hover{
+
+    transform:
+        translateY(-3px);
+
+    background:#f5c542;
+
+    color:#003b73;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    min-height:100svh;
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    text-align:center;
+
+    padding:
+        clamp(65px,8vh,90px)
+        20px
+        70px;
+
+    position:relative;
+
+    z-index:1;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-wrapper{
+
+    width:
+        clamp(
+            220px,
+            30vw,
+            370px
+        );
+
+    height:
+        clamp(
+            220px,
+            30vw,
+            370px
+        );
+
+    animation:
+        dropDown
+        1.5s
+        ease
+        forwards;
+
+    transform:
+        translateY(-250px);
+
+    opacity:0;
+
+    transition:.2s;
+}
+
+
+@keyframes dropDown{
+
+    to{
+
+        transform:
+            translateY(0);
+
+        opacity:1;
+    }
+}
+
+
+.profile-img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:
+        clamp(
+            4px,
+            .6vw,
+            7px
+        )
+        solid
+        #ffffff;
+
+    box-shadow:
+
+        0 0 0 8px
+        rgba(245,197,66,.30),
+
+        0 20px 70px
+        rgba(0,0,0,.35);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+
+.profile-img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+
+        0 0 0 12px
+        rgba(245,197,66,.40),
+
+        0 25px 90px
+        rgba(0,0,0,.45);
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+#name{
+
+    margin-top:24px;
+
+    font-size:
+        clamp(
+            27px,
+            4vw,
+            44px
+        );
+
+    line-height:1.35;
+
+    color:#ffffff;
+
+    font-weight:800;
+
+    text-shadow:
+        0 4px 15px
+        rgba(0,0,0,.2);
+}
+
+
+.tagline{
+
+    margin-top:8px;
+
+    font-size:
+        clamp(
+            15px,
+            2vw,
+            21px
+        );
+
+    line-height:1.7;
+
+    font-weight:600;
+
+    color:#ffffff;
+}
+
+
+/* =========================
+   CV BOX
+========================= */
+
+.cv-box{
+
+    width:min(
+        680px,
+        100%
+    );
+
+    margin-top:24px;
+
+    padding:
+        clamp(
+            20px,
+            4vw,
+            32px
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .12
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .22
+        );
+
+    border-radius:22px;
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+    box-shadow:
+        0 18px 50px
+        rgba(0,0,0,.15);
+}
+
+
+.cv-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    width:100%;
+
+    margin:12px 0;
+
+    font-size:
+        clamp(
+            13px,
+            1.8vw,
+            16px
+        );
+
+    line-height:1.7;
+
+    text-align:right;
+}
+
+
+.cv-item i{
+
+    flex:
+        0 0 25px;
+
+    margin-top:5px;
+
+    color:#f5c542;
+}
+
+
+.cv-item strong{
+
+    margin-left:5px;
+}
+
+
+/* =========================
+   PDF BUTTON
+========================= */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    margin-top:18px;
+
+    padding:
+        12px
+        25px;
+
+    background:#f5c542;
+
+    color:#003b73;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-size:
+        clamp(
+            13px,
+            1.8vw,
+            16px
+        );
+
+    font-weight:800;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.18);
+
+    transition:
+        transform .3s,
+        background .3s;
+}
+
+
+.btn:hover{
+
+    transform:
+        translateY(-4px);
+
+    background:#ffffff;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+
+    width:100%;
+
+    max-width:1250px;
+
+    margin:0 auto;
+
+    padding:
+        clamp(
+            60px,
+            8vw,
+            100px
+        )
+        20px;
+
+    position:relative;
+
+    z-index:1;
+}
+
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+    font-size:
+        clamp(
+            25px,
+            4vw,
+            36px
+        );
+
+    color:#ffffff;
+
+    font-weight:800;
+}
+
+
+.section-title i{
+
+    color:#f5c542;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                min(100%,250px),
+                1fr
+            )
+        );
+
+    gap:
+        clamp(
+            18px,
+            2.5vw,
+            28px
+        );
+}
+
+
+.card{
+
+    width:100%;
+
+    min-width:0;
+
+    perspective:1000px;
+
+    opacity:0;
+
+    transform:
+        translateY(70px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+    cursor:pointer;
+}
+
+
+.card.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+
+.card-inner{
+
+    position:relative;
+
+    width:100%;
+
+    height:
+        clamp(
+            155px,
+            18vw,
+            185px
+        );
+
+    transition:
+        transform .8s;
+
+    transform-style:preserve-3d;
+}
+
+
+.card:hover{
+
+    transform:
+        translateY(-5px);
+}
+
+
+.card.flipped
+.card-inner{
+
+    transform:
+        rotateY(180deg);
+}
+
+
+.card-front,
+.card-back{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    backface-visibility:hidden;
+
+    -webkit-backface-visibility:hidden;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:20px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.18);
+}
+
+
+.card-front{
+
+    background:#ffffff;
+
+    color:#003b73;
+
+    font-weight:800;
+
+    border-top:
+        5px solid
+        #005baa;
+}
+
+
+.card-front i{
+
+    font-size:
+        clamp(
+            28px,
+            4vw,
+            38px
+        );
+
+    color:#005baa;
+
+    margin-bottom:12px;
+}
+
+
+.card-back{
+
+    background:#f5c542;
+
+    color:#003b73;
+
+    transform:
+        rotateY(180deg);
+
+    font-weight:800;
+}
+
+
+.card-back i{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    width:100%;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    background:#002c55;
+
+    color:#ffffff;
+
+    font-size:
+        clamp(
+            12px,
+            1.7vw,
+            15px
+        );
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+footer i{
+
+    color:#f5c542;
+
+    margin:
+        0
+        5px;
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #eef7ff 50%,
+            #dcefff 100%
+        );
+
+    color:#003b73;
+}
+
+
+body.light
+.language-background span{
+
+    color:
+        rgba(
+            0,
+            91,
+            170,
+            .13
+        );
+}
+
+
+body.light #name{
+
+    color:#005baa;
+
+    text-shadow:none;
+}
+
+
+body.light .tagline{
+
+    color:#003b73;
+}
+
+
+body.light .cv-box{
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .95
+        );
+
+    color:#003b73;
+
+    border:
+        1px solid
+        rgba(
+            0,
+            91,
+            170,
+            .15
+        );
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            0,
+            59,
+            115,
+            .12
+        );
+}
+
+
+body.light .cv-item{
+
+    color:#003b73;
+}
+
+
+body.light .cv-item strong{
+
+    color:#003b73;
+}
+
+
+body.light .cv-item i{
+
+    color:#005baa;
+}
+
+
+body.light .section-title{
+
+    color:#003b73;
+}
+
+
+body.light .card-front{
+
+    color:#003b73;
+
+    background:#ffffff;
+
+    border-top-color:#005baa;
+}
+
+
+body.light .card-front i{
+
+    color:#005baa;
+}
+
+
+body.light .control-btn{
+
+    background:#ffffff;
+
+    color:#003b73;
+
+    border:
+        2px solid
+        #005baa;
+}
+
+
+body.light .control-btn:hover{
+
+    background:#005baa;
+
+    color:#ffffff;
+}
+
+
+body.light .btn{
+
+    background:#005baa;
+
+    color:#ffffff;
+}
+
+
+body.light .btn:hover{
+
+    background:#003b73;
+}
+
+
+body.light footer{
+
+    background:#e8f3ff;
+
+    color:#003b73;
+
+    border-top:
+        1px solid
+        rgba(
+            0,
+            91,
+            170,
+            .15
+        );
+}
+
+
+body.light footer i{
+
+    color:#005baa;
+}
+
+
+body.english
+.language-background span{
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .09
+        );
+}
+
+
+body.light.english
+.language-background span{
+
+    color:
+        rgba(
+            0,
+            91,
+            170,
+            .09
+        );
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    header{
+
+        padding-top:80px;
+    }
+
+    .cards{
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .controls{
+
+        top:10px;
+
+        left:10px;
+
+        right:10px;
+
+        justify-content:flex-start;
+    }
+
+
+    .control-btn{
+
+        min-width:42px;
+
+        min-height:40px;
+
+        padding:
+            6px
+            11px;
+
+        font-size:12px;
+    }
+
+
+    header{
+
+        padding:
+            75px
+            15px
+            60px;
+    }
+
+
+    .profile-wrapper{
+
+        width:
+            min(
+                72vw,
+                280px
+            );
+
+        height:
+            min(
+                72vw,
+                280px
+            );
+    }
+
+
+    .cv-item{
+
+        gap:8px;
+    }
+
+
+    .cards{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .section{
+
+        padding:
+            60px
+            14px;
+    }
+
+
+    .card-inner{
+
+        height:160px;
+    }
+
+
+    .intro-logo{
+
+        width:
+            clamp(
+                110px,
+                30vw,
+                155px
+            );
+    }
+
+
+    .intro-delta{
+
+        font-size:
+            clamp(
+                55px,
+                18vw,
+                95px
+            );
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:380px){
+
+    .controls{
+
+        gap:6px;
+    }
+
+
+    .language-btn span{
+
+        display:none;
+    }
+
+
+    .control-btn{
+
+        width:42px;
+
+        padding:6px;
+    }
+
+
+    .cv-box{
+
+        padding:
+            18px
+            12px;
+    }
+
+
+    .intro-title{
+
+        font-size:16px;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+        scroll-behavior:auto !important;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<div id="intro">
+
+    <div class="intro-content">
+
+        <img src="delta-logo.png"
+             class="intro-logo"
+             alt="Delta Schools Logo">
+
+        <div class="intro-delta">
+            DELTA
+        </div>
+
+        <div class="intro-line"></div>
+
+        <div class="intro-title"
+             data-ar="ملف الأداء الوظيفي 2026"
+             data-en="Professional Performance Portfolio 2026">
+
+            ملف الأداء الوظيفي 2026
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PARTICLES -->
+
+<div id="particles-js"></div>
+
+
+<!-- BACKGROUND LETTERS -->
+
+<div class="language-background"
+     id="languageBackground"
+     aria-hidden="true">
+</div>
+
+
+<!-- =========================
+     CONTROLS
+========================= -->
+
+<div class="controls">
+
+    <button class="control-btn language-btn"
+            onclick="toggleLang()"
+            title="تغيير اللغة">
+
+        <i class="fa-solid fa-language"></i>
+
+        <span id="langText">
+            English
+        </span>
+
+    </button>
+
+
+    <button class="control-btn"
+            onclick="toggleMode()"
+            id="modeBtn"
+            title="الوضع الليلي">
+
+        <i class="fa-solid fa-moon"></i>
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+
+    <!-- PROFILE -->
+
+    <div class="profile-wrapper"
+         id="profile3d">
+
+        <img src="profile.jpg"
+             class="profile-img"
+             alt="Profile Photo">
+
+    </div>
+
+
+    <!-- NAME -->
+
+    <h1 id="name"
+        data-ar="عوض رياض أمين خليل"
+        data-en="Awad Riyad Amin Khalil">
+
+        عوض رياض أمين خليل
+
+    </h1>
+
+
+    <!-- JOB -->
+
+    <p class="tagline"
+       data-ar="مشرف لغة عربية – مدارس دلتا"
+       data-en="Arabic Language Supervisor – Delta Schools">
+
+        مشرف لغة عربية – مدارس دلتا
+
+    </p>
+
+
+    <!-- CV -->
+
+    <div class="cv-box">
+
+
+        <div class="cv-item">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <div>
+
+                <strong
+                    data-ar="المؤهل:"
+                    data-en="Qualification:">
+
+                    المؤهل:
+
+                </strong>
+
+                <span
+                    data-ar="ليسانس آداب وتربية"
+                    data-en="Bachelor of Arts and Education">
+
+                    ليسانس آداب وتربية
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="cv-item">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <div>
+
+                <strong
+                    data-ar="التخصص:"
+                    data-en="Specialization:">
+
+                    التخصص:
+
+                </strong>
+
+                <span
+                    data-ar="لغة عربية"
+                    data-en="Arabic Language">
+
+                    لغة عربية
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="cv-item">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            <div>
+
+                <strong
+                    data-ar="سنة التخرج:"
+                    data-en="Graduation Year:">
+
+                    سنة التخرج:
+
+                </strong>
+
+                <span>
+                    2002
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="cv-item">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <div>
+
+                <strong
+                    data-ar="البريد:"
+                    data-en="Email:">
+
+                    البريد:
+
+                </strong>
+
+                <span>
+                    Egy.b.60255@delta.edu.sa
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PDF -->
+
+        <a href="performance.pdf"
+           download
+           class="btn">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+            <span
+                data-ar="تحميل ملف الأداء PDF"
+                data-en="Download Performance PDF">
+
+                تحميل ملف الأداء PDF
+
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     SUPERVISION
+========================= -->
+
+<section class="section">
+
+
+    <h2 class="section-title">
+
+        <i class="fa-solid fa-chalkboard-user"></i>
+
+        <span
+            data-ar="الإشراف التربوي"
+            data-en="Educational Supervision">
+
+            الإشراف التربوي
+
+        </span>
+
+    </h2>
+
+
+    <div class="cards">
+
+
+        <!-- WEEK 1 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1UQpUDXAfyQ93ZS_A0OTEmW_ViRPi8Kzp')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الأول"
+                        data-en="Week One">
+
+                        الأسبوع الأول
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 2 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1UQu-3TuQFvamQ7EaK_rxS9B4vEaQs97V')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الثاني"
+                        data-en="Week Two">
+
+                        الأسبوع الثاني
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 3 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1UT_3dxF5u-o_o4sGKLM39VxkQ')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الثالث"
+                        data-en="Week Three">
+
+                        الأسبوع الثالث
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 4 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1UYpjM46O8FQOsnHpNRLLjjCPDG2RTiEK')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الرابع"
+                        data-en="Week Four">
+
+                        الأسبوع الرابع
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 5 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1UZC5oqD9fW-7RBmBKyTkTRLU82XD0i-g')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الخامس"
+                        data-en="Week Five">
+
+                        الأسبوع الخامس
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 6 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1UfVKtBkHVbxI7Xz89kp6ucHGChqlcswB')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع السادس"
+                        data-en="Week Six">
+
+                        الأسبوع السادس
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 7 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1Upnd6pGMf8M7rgOtAVDjsMbKzN4OEAMJ')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع السابع"
+                        data-en="Week Seven">
+
+                        الأسبوع السابع
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 8 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1UqvTgHuT5usLQhKTAqS8hejT6m9QECol')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الثامن"
+                        data-en="Week Eight">
+
+                        الأسبوع الثامن
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 9 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1Uw0zp1utYxq8mYYhHtBlHOIpmAjHK5Vh')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع التاسع"
+                        data-en="Week Nine">
+
+                        الأسبوع التاسع
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 10 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1UwfZgyNK5lDyOQhXdefcz-SQTNFJI3RZ')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع العاشر"
+                        data-en="Week Ten">
+
+                        الأسبوع العاشر
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 11 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1UxEgQRwGh8UZKVTWEKmBDDK6SFVebzpa')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الحادي عشر"
+                        data-en="Week Eleven">
+
+                        الأسبوع الحادي عشر
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 12 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1V0wEqSPu6skf0yqq8zq-KzPCKgHnhjBT')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الثاني عشر"
+                        data-en="Week Twelve">
+
+                        الأسبوع الثاني عشر
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 13 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1VL_AkPixqYP1YdkDHDsLgcXxnsDSOAXt')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الثالث عشر"
+                        data-en="Week Thirteen">
+
+                        الأسبوع الثالث عشر
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 14 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1VLiN92JbRlMUN2Ge36i5lQkOMnEs2on1')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الرابع عشر"
+                        data-en="Week Fourteen">
+
+                        الأسبوع الرابع عشر
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 15 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1VMzstlW2rex3tb0xnacCzzROVav-dnWO')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع الخامس عشر"
+                        data-en="Week Fifteen">
+
+                        الأسبوع الخامس عشر
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEK 16 -->
+
+        <div class="card"
+             onclick="flipAndGo(this,'https://drive.google.com/drive/u/2/folders/1V_KP45LZf5jYx7QXpqZc_WFG7Mkzj113')">
+
+            <div class="card-inner">
+
+                <div class="card-front">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    <span
+                        data-ar="الأسبوع السادس عشر"
+                        data-en="Week Sixteen">
+
+                        الأسبوع السادس عشر
+
+                    </span>
+
+                </div>
+
+                <div class="card-back">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ar="فتح الملف"
+                        data-en="Open Folder">
+
+                        فتح الملف
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <i class="fa-solid fa-crown"></i>
+
+    <span
+        data-ar="عوض رياض - جميع الحقوق محفوظة – 2026"
+        data-en="Awad Riyad - All Rights Reserved – 2026">
+
+        عوض رياض - جميع الحقوق محفوظة – 2026
+
+    </span>
+
+    <i class="fa-solid fa-crown"></i>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   LANGUAGE
+========================= */
+
+let currentLang = "ar";
+
+
+const arabicLetters = [
+
+    "أ","ب","ت","ث","ج","ح","خ","د",
+    "ذ","ر","ز","س","ش","ص","ض","ط",
+    "ظ","ع","غ","ف","ق","ك","ل","م",
+    "ن","هـ","و","ي"
+
+];
+
+
+const englishLetters = [
+
+    "A","B","C","D","E","F","G",
+    "H","I","J","K","L","M","N",
+    "O","P","Q","R","S","T","U",
+    "V","W","X","Y","Z"
+
+];
+
+
+/* =========================
+   BACKGROUND LETTERS
+========================= */
+
+function createLanguageBackground(){
+
+    const container =
+        document.getElementById(
+            "languageBackground"
+        );
+
+    container.innerHTML = "";
+
+
+    const letters =
+        currentLang === "ar"
+        ? arabicLetters
+        : englishLetters;
+
+
+    letters.forEach(
+        (letter,index)=>{
+
+            const span =
+                document.createElement(
+                    "span"
+                );
+
+
+            span.textContent =
+                letter;
+
+
+            const positions = [
+
+                [5,5],
+                [15,18],
+                [8,38],
+                [20,58],
+                [7,80],
+
+                [38,8],
+                [48,23],
+                [32,42],
+                [52,63],
+                [38,85],
+
+                [70,5],
+                [80,20],
+                [68,40],
+                [82,58],
+                [70,80],
+
+                [92,10],
+                [90,32],
+                [94,52],
+                [88,72],
+                [93,90],
+
+                [28,92],
+                [58,95],
+                [42,48],
+                [25,72],
+                [62,30],
+
+                [10,55],
+                [55,10],
+                [75,45]
+
+            ];
+
+
+            const pos =
+                positions[
+                    index %
+                    positions.length
+                ];
+
+
+            span.style.top =
+                pos[0] + "%";
+
+
+            span.style.left =
+                pos[1] + "%";
+
+
+            span.style.animationDelay =
+                (index * .25) + "s";
+
+
+            container.appendChild(
+                span
+            );
+
+        }
+    );
+}
+
+
+/* =========================
+   CHANGE LANGUAGE
+========================= */
+
+function toggleLang(){
+
+    currentLang =
+        currentLang === "ar"
+        ? "en"
+        : "ar";
+
+
+    document.documentElement.lang =
+        currentLang;
+
+
+    document.documentElement.dir =
+        currentLang === "ar"
+        ? "rtl"
+        : "ltr";
+
+
+    document.body.classList.toggle(
+        "english",
+        currentLang === "en"
+    );
+
+
+    document
+        .querySelectorAll("[data-ar]")
+        .forEach(
+            element=>{
+
+                element.textContent =
+
+                    currentLang === "ar"
+
+                    ? element.getAttribute(
+                        "data-ar"
+                    )
+
+                    : element.getAttribute(
+                        "data-en"
+                    );
+
+            }
+        );
+
+
+    document.getElementById(
+        "langText"
+    ).textContent =
+
+        currentLang === "ar"
+        ? "English"
+        : "العربية";
+
+
+    document
+        .querySelectorAll(".cv-item")
+        .forEach(
+            item=>{
+
+                item.style.textAlign =
+
+                    currentLang === "ar"
+                    ? "right"
+                    : "left";
+
+            }
+        );
+
+
+    createLanguageBackground();
+
+}
+
+
+/* =========================
+   DARK / LIGHT MODE
+========================= */
+
+function toggleMode(){
+
+    document.body.classList.toggle(
+        "light"
+    );
+
+
+    const icon =
+        document.querySelector(
+            "#modeBtn i"
+        );
+
+
+    if(
+        document.body.classList.contains(
+            "light"
+        )
+    ){
+
+        icon.className =
+            "fa-solid fa-sun";
+
+    }else{
+
+        icon.className =
+            "fa-solid fa-moon";
+
+    }
+
+}
+
+
+/* =========================
+   WEEK CARD
+========================= */
+
+function flipAndGo(card,link){
+
+    card.classList.add(
+        "flipped"
+    );
+
+
+    setTimeout(
+        ()=>{
+
+            window.open(
+                link,
+                "_blank"
+            );
+
+        },
+        800
+    );
+
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+const observer =
+    new IntersectionObserver(
+
+        entries=>{
+
+            entries.forEach(
+                entry=>{
+
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target.classList.add(
+                            "show"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold:.15
+        }
+
+    );
+
+
+document
+    .querySelectorAll(".card")
+    .forEach(
+        card =>
+            observer.observe(card)
+    );
+
+
+/* =========================
+   3D PROFILE
+========================= */
+
+const profile =
+    document.getElementById(
+        "profile3d"
+    );
+
+
+document.addEventListener(
+    "mousemove",
+    e=>{
+
+        if(
+            window.innerWidth <= 700
+        ){
+
+            return;
+
+        }
+
+
+        const x =
+            (
+                window.innerWidth / 2
+                -
+                e.clientX
+            ) / 45;
+
+
+        const y =
+            (
+                window.innerHeight / 2
+                -
+                e.clientY
+            ) / 45;
+
+
+        profile.style.transform =
+            `rotateY(${x}deg) rotateX(${y}deg)`;
+
+    }
+);
+
+
+/* =========================
+   PARTICLES
+========================= */
+
+if(
+    typeof particlesJS !==
+    "undefined"
+){
+
+    particlesJS(
+        "particles-js",
+        {
+
+            particles:{
+
+                number:{
+
+                    value:55,
+
+                    density:{
+
+                        enable:true,
+
+                        value_area:900
+
+                    }
+
+                },
+
+
+                color:{
+
+                    value:"#ffffff"
+
+                },
+
+
+                size:{
+
+                    value:2.5,
+
+                    random:true
+
+                },
+
+
+                opacity:{
+
+                    value:.35
+
+                },
+
+
+                move:{
+
+                    speed:1.2,
+
+                    direction:"none",
+
+                    out_mode:"out"
+
+                },
+
+
+                line_linked:{
+
+                    enable:true,
+
+                    opacity:.12,
+
+                    color:"#ffffff"
+
+                }
+
+            },
+
+
+            interactivity:{
+
+                detect_on:"canvas",
+
+                events:{
+
+                    onhover:{
+
+                        enable:true,
+
+                        mode:"repulse"
+
+                    }
+
+                },
+
+
+                modes:{
+
+                    repulse:{
+
+                        distance:100,
+
+                        duration:.4
+
+                    }
+
+                }
+
+            },
+
+
+            retina_detect:true
+
+        }
+    );
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+createLanguageBackground();
+
+</script>
+
+
+</body>
+
+</html>
+```
